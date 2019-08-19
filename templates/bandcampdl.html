@@ -1,0 +1,32 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}"> 
+        <title>Bandcamp Downloader</title>
+    </head>
+    
+    <body>
+        <h1>Bandcamp Downloader</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="url-container">
+                {{ form.url }}
+                <input type="submit" value="Search">
+            </div>
+            <div id="albumart">
+                <img src="{{album_art}}" width="350">
+            </div>
+            <ul>                
+                {% for title, stream_link in combined %}
+                    <li><a href="{{stream_link}}" download target="_blank">{{title}}</a></li>
+                {%  endfor %}
+            </ul>
+        </form>
+        <footer>
+            I do not encourage illegal downloads <br>
+            Right Click and select "Save link as" to download
+        </footer>
+    </body>
+</html>

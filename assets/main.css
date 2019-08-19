@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "proxima-nova-soft-regular";
+    src: url("./fonts/proxima-nova-soft-regular.otf");
+}
+
+* {
+    font-family: "proxima-nova-soft-regular", Helvetica;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 150px;
+    font-size: 50px;
+}
+
+.url-container {
+    padding: 40px;
+}
+
+.url-container input[type=url] {
+    padding: 10px;
+    color: #0080FF;
+    border-width: 2px;
+    width: 500px;
+}
+
+.url-container input[type=submit] {
+    padding: 12px;
+    color: white;
+    background: #708090;
+    border-width: 0px;
+}
+
+.url-container input[type=submit]:hover{
+    background: #FF9A00;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: #0080FF;
+}
+
+#albumart {
+    margin-top: 30px;
+}
+
+ul {
+    padding: 10px;
+    list-style: none;
+}
+
+ul li {
+    padding: 5px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #0080FF;
+}
+
+ul li a:hover{
+    color: red;
+}
+
+footer {
+    bottom: 0;
+    color: #707070;
+    position: relative;
+    font-size: small;
+    margin: 60px 0px 20px;
+}
